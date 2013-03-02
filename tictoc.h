@@ -21,7 +21,6 @@ class clock_underflow_exception : public std::exception
     }
 } tictoc_underflow_ex;
 
-
 class tictoc {
     private:
         struct timespec clocks[MAX_CLOCKS];
