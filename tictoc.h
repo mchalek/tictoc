@@ -2,7 +2,7 @@
 #include <exception>
 
 // simple nested stack-based inline high-precision timer class
-// must link with -lrt
+// link with -lrt
 // throws exceptions when used improperly
 
 #define MAX_CLOCKS 16
