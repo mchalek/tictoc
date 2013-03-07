@@ -7,22 +7,22 @@
 
 #define MAX_CLOCKS 16
 
-class clock_overflow_exception : public std::exception
-{
-    virtual const char* what() const throw() {
-        return "Exceeded MAX_CLOCKS!\n";
-    }
-} tictoc_maxclock_ex;
-
-class clock_underflow_exception : public std::exception
-{
-    virtual const char* what() const throw() {
-        return "No clocks active\n";
-    }
-} tictoc_underflow_ex;
-
 class tictoc {
     private:
+        class clock_overflow_exception : public std::exception
+        {
+            virtual const char* what() const throw() {
+                return "Exceeded MAX_CLOCKS!\n";
+            }
+        } tictoc_maxclock_ex;
+
+        class clock_underflow_exception : public std::exception
+        {
+            virtual const char* what() const throw() {
+                return "No clocks active\n";
+            }
+        } tictoc_underflow_ex;
+
         struct timespec clocks[MAX_CLOCKS];
         int depth;
     public:
