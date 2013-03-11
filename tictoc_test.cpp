@@ -1,4 +1,4 @@
-#include "tictoc.h"
+#include "tictoc.hpp"
 #include <iostream>
 #include <unistd.h>
 
